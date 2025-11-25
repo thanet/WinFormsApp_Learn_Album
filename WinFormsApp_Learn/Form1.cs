@@ -39,7 +39,7 @@ namespace WinFormsApp_Learn
             //albumsDAO.albums.Add (a2);
 
             // connect the list to the grid view control
-            albumBindingSource.DataSource = albumsDAO.getAllAlbums;
+            albumBindingSource.DataSource = albumsDAO.getAllAlbums();
 
             dgv_Album.DataSource = albumBindingSource;  // we can use   albumsDAO.albums;
 

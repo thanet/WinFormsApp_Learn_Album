@@ -11,7 +11,7 @@ namespace WinFormsApp_Learn
         public string ArtistName { get; set; }
         public int Year { get; set; }
         public string ImageURL { get; set; }
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
 
     }

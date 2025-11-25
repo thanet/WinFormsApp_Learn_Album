@@ -12,8 +12,8 @@ namespace WinFormsApp_Learn
 
         // connect to Mysql database
 
-        string connectString = "datasource=localhost;port=3306;username=root;password=312314," +
-            "                   database=music;";
+        string connectionString = "server=localhost;Uid=root;Pwd=312314;" +
+            "                   Database=music;";
 
         public List<Album> getAllAlbums()
         {
@@ -22,8 +22,32 @@ namespace WinFormsApp_Learn
 
             // connect to the mysql server
             MySqlConnection connection = new MySqlConnection
-                (connectString);
+                (connectionString);
             connection.Open();
+
+            // define the sql statement to fetch all albums
+            MySqlCommand command = new MySqlCommand("SELECT * FROM albums;", 
+                connection);
+            using (MySqlDataReader reader = command.ExecuteReader())
+            //as MySqlDataReader)
+            {
+                while (reader.Read())
+                {
+                    Album a = new Album
+                    {
+                        ID = reader.GetInt32(0),
+                        AlbumName = reader.GetString(1),
+                        ArtistName = reader.GetString(2),
+                        Year = reader.GetInt32(3),
+                        ImageURL = reader.GetString(4),
+                        Description = reader.GetString(5)
+
+                    };
+
+                    returnThese.Add(a);
+                }
+            }
+            connection.Close();
 
             return returnThese;
 
