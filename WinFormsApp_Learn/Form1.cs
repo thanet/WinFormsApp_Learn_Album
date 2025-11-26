@@ -44,5 +44,19 @@ namespace WinFormsApp_Learn
             dgv_Album.DataSource = albumBindingSource;  // we can use   albumsDAO.albums;
 
         }
+
+        
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            // connect the list to the grid view control
+            AlbumsDAO albumsDAO = new AlbumsDAO();
+            
+            albumBindingSource.DataSource = albumsDAO.searchTitles
+                (txt_Search.Text);
+
+            dgv_Album.DataSource = albumBindingSource;  // we can use   albumsDAO.albums;
+
+        }
     }
 }

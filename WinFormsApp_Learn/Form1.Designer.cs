@@ -31,12 +31,14 @@
             but_Album = new Button();
             lblHellowWorld = new Label();
             dgv_Album = new DataGridView();
+            btn_Search = new Button();
+            txt_Search = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgv_Album).BeginInit();
             SuspendLayout();
             // 
             // but_Album
             // 
-            but_Album.Location = new Point(198, 84);
+            but_Album.Location = new Point(309, 43);
             but_Album.Name = "but_Album";
             but_Album.Size = new Size(105, 35);
             but_Album.TabIndex = 0;
@@ -47,7 +49,7 @@
             // lblHellowWorld
             // 
             lblHellowWorld.AutoSize = true;
-            lblHellowWorld.Location = new Point(327, 56);
+            lblHellowWorld.Location = new Point(970, 84);
             lblHellowWorld.Name = "lblHellowWorld";
             lblHellowWorld.Size = new Size(50, 20);
             lblHellowWorld.TabIndex = 1;
@@ -61,11 +63,30 @@
             dgv_Album.Size = new Size(655, 271);
             dgv_Album.TabIndex = 2;
             // 
+            // btn_Search
+            // 
+            btn_Search.Location = new Point(772, 43);
+            btn_Search.Name = "btn_Search";
+            btn_Search.Size = new Size(96, 35);
+            btn_Search.TabIndex = 3;
+            btn_Search.Text = "Search";
+            btn_Search.UseVisualStyleBackColor = true;
+            btn_Search.Click += btn_Search_Click;
+            // 
+            // txt_Search
+            // 
+            txt_Search.Location = new Point(432, 43);
+            txt_Search.Name = "txt_Search";
+            txt_Search.Size = new Size(318, 27);
+            txt_Search.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1052, 502);
+            ClientSize = new Size(1172, 502);
+            Controls.Add(txt_Search);
+            Controls.Add(btn_Search);
             Controls.Add(dgv_Album);
             Controls.Add(lblHellowWorld);
             Controls.Add(but_Album);
@@ -82,5 +103,7 @@
         private Button but_Album;
         private Label lblHellowWorld;
         private DataGridView dgv_Album;
+        private Button btn_Search;
+        private TextBox txt_Search;
     }
 }
