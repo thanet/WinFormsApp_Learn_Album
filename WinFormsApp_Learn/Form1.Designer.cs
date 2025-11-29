@@ -33,7 +33,9 @@
             dgv_Album = new DataGridView();
             btn_Search = new Button();
             txt_Search = new TextBox();
+            picbox_00 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgv_Album).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picbox_00).BeginInit();
             SuspendLayout();
             // 
             // but_Album
@@ -62,6 +64,7 @@
             dgv_Album.Name = "dgv_Album";
             dgv_Album.Size = new Size(655, 271);
             dgv_Album.TabIndex = 2;
+            dgv_Album.CellClick += dgv_Album_CellClick;
             // 
             // btn_Search
             // 
@@ -80,11 +83,21 @@
             txt_Search.Size = new Size(318, 27);
             txt_Search.TabIndex = 4;
             // 
+            // picbox_00
+            // 
+            picbox_00.Location = new Point(106, 84);
+            picbox_00.Name = "picbox_00";
+            picbox_00.Size = new Size(189, 259);
+            picbox_00.TabIndex = 5;
+            picbox_00.TabStop = false;
+            picbox_00.WaitOnLoad = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1172, 502);
+            Controls.Add(picbox_00);
             Controls.Add(txt_Search);
             Controls.Add(btn_Search);
             Controls.Add(dgv_Album);
@@ -93,6 +106,7 @@
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dgv_Album).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picbox_00).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,5 +119,6 @@
         private DataGridView dgv_Album;
         private Button btn_Search;
         private TextBox txt_Search;
+        private PictureBox picbox_00;
     }
 }
