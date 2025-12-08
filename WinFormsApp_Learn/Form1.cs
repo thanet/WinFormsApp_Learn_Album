@@ -83,7 +83,7 @@ namespace WinFormsApp_Learn
         private async void dgv_Album_CellClick(object sender, 
             DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("Clicked");
+            //MessageBox.Show("Clicked");
             DataGridView dataGridView = (DataGridView)sender;
 
             // get the row number clicked
